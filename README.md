@@ -5,12 +5,15 @@
 ![](static/images/ts-combine.png)
 </div>
 
-ts_combine integrates 
-- [darts](repos/darts/README.md)
-- [Merlion](repos/Merlion/README.md)
-- [prophet](repos/prophet/README.md)
-- [tslearn](repos/tslearn/README.md)
-- [tsfresh](repos/tsfresh/README.md)
-- other projects
+## ts_combine integrates 
+- [darts](https://github.com/unit8co/darts)
+- [Merlion](https://github.com/salesforce/Merlion)
+- [prophet](https://github.com/facebook/prophet)
+- [tslearn](https://github.com/tslearn-team/tslearn/)
+- [tsfresh](https://github.com/blue-yonder/tsfresh)
+- [sktime](https://github.com/alan-turing-institute/sktime)
+
+
+
 
 
