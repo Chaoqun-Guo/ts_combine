@@ -11,3 +11,6 @@
 [submodule "repos/tslearn"]
 	path = repos/tslearn
 	url = https://github.com/tslearn-team/tslearn.git
+[submodule "repos/Merlion"]
+	path = repos/Merlion
+	url = https://github.com/salesforce/Merlion.git
