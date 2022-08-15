@@ -1,6 +1,4 @@
-[submodule "repos/Merlion"]
-	path = repos/Merlion
-	url = https://github.com/salesforce/Merlion.git
+
 [submodule "repos/tsfresh"]
 	path = repos/tsfresh
 	url = https://github.com/blue-yonder/tsfresh.git
