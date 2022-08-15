@@ -1,0 +1,90 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install Merlion
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install bc openjdk-11-jre-headless -y --fix-missing
+        python -m pip install --upgrade pip setuptools wheel build
+        python -m pip install pytest coverage
+        python -m build
+        for f in dist/*.whl; do pip install $f[all]; done
+        pip install -e ts_datasets/
+
+    - name: Test with pytest
+      id: test
+      run: |
+        # Get a comma-separated list of the directories of all python source files
+        source_files=$(for f in $(find merlion -iname "*.py"); do echo -n ",$f"; done)
+        script="import os; print(','.join({os.path.dirname(f) for f in '$source_files'.split(',') if f}))"
+        source_modules=$(python -c "$script")
+
+        # A BLAS bug causes high-dim multivar Bayesian LR test to segfault in 3.6. Run the test first to avoid.
+        if [[ $PYTHON_VERSION == 3.6 ]]; then
+          python -m pytest -v tests/change_point/test_conj_prior.py
+          coverage run --source=${source_modules} -L -m pytest -v --ignore tests/change_point/test_conj_prior.py
+        else
+          coverage run --source=${source_modules} -L -m pytest -v
+        fi
+
+        # Obtain code coverage from coverage report
+        coverage report
+        coverage xml -o .github/badges/coverage.xml
+        COVERAGE=`coverage report | grep "TOTAL" | grep -Eo "[0-9\.]+%"`
+        echo "##[set-output name=coverage;]${COVERAGE}"
+
+        # Choose a color based on code coverage
+        COVERAGE=${COVERAGE/\%/}
+        if (($COVERAGE > 90)); then
+          COLOR=brightgreen
+        elif (($COVERAGE > 80)); then
+          COLOR=green
+        elif (($COVERAGE > 70)); then
+          COLOR=yellow
+        elif (($COVERAGE > 60)); then
+          COLOR=orange
+        else
+          COLOR=red
+        fi
+        echo "##[set-output name=color;]${COLOR}"
+      env:
+        PYTHON_VERSION: ${{ matrix.python-version }}
+
+    - name: Create coverage badge
+      if: ${{ github.ref == 'refs/heads/main' && matrix.python-version == '3.8' }}
+      uses: emibcn/badge-action@v1.2.1
+      with:
+        label: coverage
+        status: ${{ steps.test.outputs.coverage }}
+        color: ${{ steps.test.outputs.color }}
+        path: .github/badges/coverage.svg
+
+    - name: Push badge to badges branch
+      uses: s0/git-publish-subdir-action@develop
+      if: ${{ github.ref == 'refs/heads/main' && matrix.python-version == '3.8' }}
+      env:
+        REPO: self
+        BRANCH: badges
+        FOLDER: .github/badges
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,15 @@
+[submodule "repos/Merlion"]
+	path = repos/Merlion
+	url = https://github.com/salesforce/Merlion.git
+[submodule "repos/tsfresh"]
+	path = repos/tsfresh
+	url = https://github.com/blue-yonder/tsfresh.git
+[submodule "repos/prophet"]
+	path = repos/prophet
+	url = https://github.com/facebook/prophet.git
+[submodule "repos/darts"]
+	path = repos/darts
+	url = https://github.com/unit8co/darts.git
+[submodule "repos/tslearn"]
+	path = repos/tslearn
+	url = https://github.com/tslearn-team/tslearn.git
