@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="-OHtUdFjwsbj-IQPhT8J" name="Page-1">
-        <mxGraphModel dx="2864" dy="1142" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1903" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,47 +10,41 @@
                 <mxCell id="16" value="" style="edgeStyle=none;html=1;fontSize=14;" parent="1" source="13" target="15" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="400" y="320" width="270" height="230" as="geometry"/>
+                <mxCell id="13" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="330" width="260" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-22" y="380" width="170" height="110" as="geometry"/>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="-7.5" y="380" width="152" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="" style="shape=datastore;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-7" y="410" width="60" height="60" as="geometry"/>
+                    <mxGeometry x="10" y="410" width="117" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="shape=datastore;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="73" y="410" width="60" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="8" value="数据仓库" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="33" y="380" width="60" height="20" as="geometry"/>
+                <mxCell id="8" value="数据仓库" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="33.5" y="385" width="70" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="" style="edgeStyle=none;html=1;" parent="1" source="9" target="11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="特征工程-特征选择&lt;br&gt;（tsfresh项目）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="260" y="405" width="120" height="60" as="geometry"/>
+                <mxCell id="9" value="特征工程-特征选择&lt;br style=&quot;font-size: 14px;&quot;&gt;（tsfresh项目）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="405" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="模型&lt;br&gt;{&lt;br&gt;ARIMA&lt;br&gt;VARIMA&lt;br&gt;AutoARIMA&lt;br&gt;...&lt;br&gt;TCNModel&lt;br&gt;TransformerModel&lt;br&gt;...&lt;br&gt;}" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="430" y="343.75" width="120" height="182.5" as="geometry"/>
+                <mxCell id="11" value="ARIMA&lt;br style=&quot;font-size: 14px&quot;&gt;VARIMA&lt;br style=&quot;font-size: 14px&quot;&gt;AutoARIMA&lt;br style=&quot;font-size: 14px&quot;&gt;...&lt;br style=&quot;font-size: 14px&quot;&gt;TCNModel&lt;br style=&quot;font-size: 14px&quot;&gt;TransformerModel" style="whiteSpace=wrap;html=1;rounded=0;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="343.75" width="130" height="182.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Prophet 项目&lt;br style=&quot;font-size: 14px&quot;&gt;Merlion 项目&lt;br&gt;SKtime 项目&lt;br style=&quot;font-size: 14px&quot;&gt;TSlearn 项目" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="400" width="100" height="70" as="geometry"/>
+                <mxCell id="14" value="Prophet 项目&lt;br style=&quot;font-size: 14px&quot;&gt;Merlion 项目&lt;br&gt;sktime 项目&lt;br style=&quot;font-size: 14px&quot;&gt;tslearn 项目&lt;br&gt;darts 项目" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="390" width="100" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="分类&lt;br&gt;预测" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
-                    <mxGeometry x="690" y="410" width="60" height="55" as="geometry"/>
+                <mxCell id="15" value="分类&lt;br style=&quot;font-size: 14px;&quot;&gt;预测" style="whiteSpace=wrap;html=1;rounded=1;fontSize=14;fontColor=#009900;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="382.5" width="60" height="105" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="TS-COMBINE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=32;" parent="1" vertex="1">
-                    <mxGeometry x="-7" y="303.75" width="220" height="40" as="geometry"/>
+                <mxCell id="18" value="TS_COMBINE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=32;" parent="1" vertex="1">
+                    <mxGeometry x="-20" y="320" width="220" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="集成到一个python package" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="420" y="323.75" width="160" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="20" value="数据预处理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="162" y="410" width="80" height="20" as="geometry"/>
+                <mxCell id="20" value="数据预处理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="148" y="410" width="90" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

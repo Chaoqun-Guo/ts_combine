@@ -14,3 +14,6 @@
 [submodule "repos/Merlion"]
 	path = repos/Merlion
 	url = https://github.com/salesforce/Merlion.git
+[submodule "repos/sktime"]
+	path = repos/sktime
+	url = https://github.com/alan-turing-institute/sktime.git
