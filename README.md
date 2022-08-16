@@ -25,6 +25,7 @@ A time series analysis integration toolkit in Python
 </div>
 
 <hr>
+
 ## Installation
 There are different alternatives to install ts_combine:
 
