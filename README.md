@@ -5,8 +5,6 @@ A time series analysis integration toolkit in Python
 
 ![](static/images/ts-combine.png)
 </div>
-<hr>
-
 
 ## ！Notice, ts_combine integrates the following projects, you can click the link for more details.
 - [darts](https://github.com/unit8co/darts)
@@ -15,7 +13,6 @@ A time series analysis integration toolkit in Python
 - [tslearn](https://github.com/tslearn-team/tslearn/)
 - [tsfresh](https://github.com/blue-yonder/tsfresh)
 - [sktime](https://github.com/alan-turing-institute/sktime)
-
 
 | Section | Description |
 |-|-|
@@ -34,7 +31,6 @@ There are different alternatives to install ts_combine:
 In order for the installation to be successful, the required dependencies must be installed. For a more detailed guide on how to install ts_combine, please see the [Documention](./docs/installation.md).
 
 ## Getting started
-
 ### 1. Getting the data in the right format
 ts_combine expects a time series dataset to be formatted as a 3D `numpy` array. The 3D correspond to the number of time series, the number of measurements per time series and the number of dimensions respectively (`n_ts,max_sz,d`). In order to get the data in the right format, please see the [Documention](./docs/getting_the_data_in_the_right_format.md).
 
@@ -50,7 +46,6 @@ It should further be noted that tslearn included in ts_combine supports variable
                                 my_third_time_series])
 >>> y = [0, 1, 1]
 ```
-
 ### 2. Spend less time on feature engineering
 ts_combine contains the `tsfresh` python package, the package provides systematic time-series feature extraction by combining established algorithms from statistics, time-series analysis, signal processing, and nonlinear dynamics with a robust feature selection algorithm. In this context, the term time-series is interpreted in the broadest possible sense, such that any types of sampled data or even event sequences can be characterised.
 
@@ -64,7 +59,6 @@ Data Scientists often spend most of their time either cleaning data or building 
 </div>
 
 ### 3. Data preprocessing and transformations
-
 Optionally, `tslearn` included in ts_combine has several utilities to preprocess the data. In order to facilitate the convergence of different algorithms, you can scale time series. Alternatively, in order to speed up training times, one can resample the data or apply a piece-wise transformation. 
 
 ```
@@ -75,7 +69,6 @@ Optionally, `tslearn` included in ts_combine has several utilities to preprocess
  [[0.] [0.333] [1.] [0.333] [nan]]
  [[0.] [0.333] [1.] [0.333] [0.333]]]
 ```
-
 ### 4. Training a model
 After getting the data in the right format, a model can be trained. Depending on the use case, ts_combine supports different tasks: classification, clustering and regression. For an extensive overview of possibilities, check out our gallery of examples.
 
@@ -97,7 +90,6 @@ model = DefaultDetector(DefaultDetectorConfig())
 model.train(train_data=train_data)
 test_pred = model.get_anomaly_label(time_series=test_data)
 ```
-
 Next, we visualize the model's predictions.
 ```
 from merlion.plot import plot_anoms
@@ -127,7 +119,6 @@ Mean Time To Detect: 1 days 10:30
 </div>
 
 ## Available features
-
 ### 1. Detection and/or forecasting
 The table below provides a visual overview of how Merlion's ( included in ts_combine) key features compare to other libraries for time series anomaly detection and/or forecasting.
 
@@ -172,13 +163,10 @@ Model | Univariate | Multivariate | Probabilistic | Multiple-series training | P
 `TransformerModel` | ✅ | ✅ | ✅ | ✅ | ✅ | | |
 `TFTModel` (Temporal Fusion Transformer) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
 Naive Baselines | ✅ | | | | | | |
-
 ## Documentation
 For example code and an introduction to ts_combine, see the Jupyter notebooks in examples, and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
-
 ## Contributing
 The development is ongoing, and we welcome suggestions, pull requests and issues on GitHub. All contributors will be acknowledged on the [change log page](./docs/change_log_page.md).
-
 ## Acknowledgements
 ts_combine integrates the following projects, you can click the link for more details. [darts](https://github.com/unit8co/darts), [Merlion](https://github.com/salesforce/Merlion), [prophet](https://github.com/facebook/prophet), [tslearn](https://github.com/tslearn-team/tslearn/), [tsfresh](https://github.com/blue-yonder/tsfresh), [sktime](https://github.com/alan-turing-institute/sktime). 
 
