@@ -5,14 +5,10 @@ A time series analysis integration toolkit in Python
 
 ![](static/images/ts-combine.png)
 </div>
-
-## ！Notice, ts_combine integrates the following projects, you can click the link for more details.
-
-| [darts](https://github.com/unit8co/darts) | [Merlion](https://github.com/salesforce/Merlion) | [prophet](https://github.com/facebook/prophet) | [tslearn](https://github.com/tslearn-team/tslearn/) | [tsfresh](https://github.com/blue-yonder/tsfresh) | [sktime](https://github.com/alan-turing-institute/sktime) |
-
+<div align="center">
 
 | Section | Description |
-|-|-|
+|:-:|:-:|
 | [Installation](#installation) | Installing the dependencies and ts_combine |
 | [Getting started](#getting-started) | A quick introduction on how to use ts_combine |
 | [Available features](#available-features) | An extensive overview of ts_combine's functionalities |
@@ -20,14 +16,21 @@ A time series analysis integration toolkit in Python
 | [Contributing](#contributing) | A guide for heroes willing to contribute |
 | [Acknowledgements](#acknowledgements) | Acknowledgements |
 | [License](#license) | License |
+</div>
 
+## **\*Notice, ts_combine integrates the following projects, you can click the link for more details.\***
+<div align="center">
+
+| [darts](https://github.com/unit8co/darts) | [Merlion](https://github.com/salesforce/Merlion) | [prophet](https://github.com/facebook/prophet) | [tslearn](https://github.com/tslearn-team/tslearn/) | [tsfresh](https://github.com/blue-yonder/tsfresh) | [sktime](https://github.com/alan-turing-institute/sktime) |
+</div>
+
+<hr>
 ## Installation
 There are different alternatives to install ts_combine:
 
 - Git: `git clone https://github.com/Chaoqun-Guo/ts_combine.git`
 
 In order for the installation to be successful, the required dependencies must be installed. For a more detailed guide on how to install ts_combine, please see the [Documention](./docs/installation.md).
-
 ## Getting started
 ### 1. Getting the data in the right format
 ts_combine expects a time series dataset to be formatted as a 3D `numpy` array. The 3D correspond to the number of time series, the number of measurements per time series and the number of dimensions respectively (`n_ts,max_sz,d`). In order to get the data in the right format, please see the [Documention](./docs/getting_the_data_in_the_right_format.md).
