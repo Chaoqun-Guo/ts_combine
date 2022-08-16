@@ -7,12 +7,9 @@ A time series analysis integration toolkit in Python
 </div>
 
 ## ！Notice, ts_combine integrates the following projects, you can click the link for more details.
-- [darts](https://github.com/unit8co/darts)
-- [Merlion](https://github.com/salesforce/Merlion)
-- [prophet](https://github.com/facebook/prophet)
-- [tslearn](https://github.com/tslearn-team/tslearn/)
-- [tsfresh](https://github.com/blue-yonder/tsfresh)
-- [sktime](https://github.com/alan-turing-institute/sktime)
+
+| [darts](https://github.com/unit8co/darts) | [Merlion](https://github.com/salesforce/Merlion) | [prophet](https://github.com/facebook/prophet) | [tslearn](https://github.com/tslearn-team/tslearn/) | [tsfresh](https://github.com/blue-yonder/tsfresh) | [sktime](https://github.com/alan-turing-institute/sktime) |
+
 
 | Section | Description |
 |-|-|
@@ -23,6 +20,7 @@ A time series analysis integration toolkit in Python
 | [Contributing](#contributing) | A guide for heroes willing to contribute |
 | [Acknowledgements](#acknowledgements) | Acknowledgements |
 | [License](#license) | License |
+
 ## Installation
 There are different alternatives to install ts_combine:
 
