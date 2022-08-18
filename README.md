@@ -139,30 +139,30 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 
 | Model | Univariate | Multivariate | Probabilistic | Multiple-series training | Past-observed covariates support | Future-known covariates | Static covariates support | Reference |
 |:---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-[ARIMA](./repos/darts/darts/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | |
-[VARIMA](./repos/darts/darts/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | |
-[AutoARIMA](./repos/darts/darts/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |
-[StatsForecastAutoARIMA](./repos/darts/darts/models/forecasting/sf_auto_arima.py)| ✅ | | ✅ | | | ✅ | | [statsforecast](https://github.com/Nixtla/statsforecast)
-[ExponentialSmoothing](./repos/darts/darts/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |
-[BATS+TBATS](./repos/darts/darts/models/forecasting/tbats.py) | ✅ | | ✅ | | | | | [TBATS paper](https://robjhyndman.com/papers/ComplexSeasonality.pdf)
-[Theta+FourTheta](./repos/darts/darts/models/forecasting/theta.py)| ✅ | | | | | | | [Theta](https://robjhyndman.com/papers/Theta.pdf) & [4 Theta](https://github.com/Mcompetitions/M4-methods/blob/master/4Theta%20method.R)
-[Prophet](./repos/darts/darts/models/forecasting/prophet_model.py) | ✅ | | ✅ | | | ✅ | | [Prophet repo](https://github.com/facebook/prophet)
-[FFT](./repos/darts/darts/models/forecasting/fft.py) | ✅ | | | | | | |
-[KalmanForecaster](./repos/darts/darts/models/forecasting/kalman_forecaster.py) | ✅ | ✅ | ✅ | | | ✅ | | [N4SID paper](https://people.duke.edu/~hpgavin/SystemID/References/VanOverschee-Automatica-1994.pdf)
-[Croston](./repos/darts/darts/models/forecasting/croston.py)| ✅ | | | | | | |
-[RegressionModel](./repos/darts/darts/models/forecasting/regression_model.py)| ✅ | ✅ | | ✅ | ✅ | ✅ | |
-[RandomForest](./repos/darts/darts/models/forecasting/random_forest.py) | ✅ | ✅ | | ✅ | ✅ | ✅ | |
-[LinearRegressionModel](./repos/darts/darts/models/forecasting/linear_regression_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[LightGBMModel](./repos/darts/darts/models/forecasting/gradient_boosted_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[CatBoostModel](./repos/darts/darts/models/forecasting/catboost_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[RNNModel](./repos/darts/darts/models/forecasting/rnn_model.py)| ✅ | ✅ | ✅ | ✅ | | ✅ | | [DeepAR paper](https://arxiv.org/abs/1704.04110)
-[BlockRNNModel](./repos/darts/darts/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |
-[NBEATSModel](./repos/darts/darts/models/forecasting/nbeats.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-BEATS paper](https://arxiv.org/abs/1905.10437)
-[NHiTSModel](./repos/darts/darts/models/forecasting/nhits.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-HiTS paper](https://arxiv.org/abs/2201.12886)
-[TCNModel](./repos/darts/darts/models/forecasting/tcn_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [TCN paper](https://arxiv.org/abs/1803.01271), [DeepTCN paper](https://arxiv.org/abs/1906.04397), [blog post](https://medium.com/unit8-machine-learning-publication/temporal-convolutional-networks-and-forecasting-5ce1b6e97ce4)
-[TransformerModel](./repos/darts/darts/models/forecasting/transformer_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | |
-[TFTModel](./repos/darts/darts/models/forecasting/tft_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
-[Naive Baselines](./repos/darts/darts/models/forecasting/forecasting_model.py) | ✅ | | | | | | |
+[ARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | |
+[VARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | |
+[AutoARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |
+[StatsForecastAutoARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/sf_auto_arima.py)| ✅ | | ✅ | | | ✅ | | [statsforecast](https://github.com/Nixtla/statsforecast)
+[ExponentialSmoothing](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |
+[BATS+TBATS](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tbats.py) | ✅ | | ✅ | | | | | [TBATS paper](https://robjhyndman.com/papers/ComplexSeasonality.pdf)
+[Theta+FourTheta](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/theta.py)| ✅ | | | | | | | [Theta](https://robjhyndman.com/papers/Theta.pdf) & [4 Theta](https://github.com/Mcompetitions/M4-methods/blob/master/4Theta%20method.R)
+[Prophet](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/prophet_model.py) | ✅ | | ✅ | | | ✅ | | [Prophet repo](https://github.com/facebook/prophet)
+[FFT](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/fft.py) | ✅ | | | | | | |
+[KalmanForecaster](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/kalman_forecaster.py) | ✅ | ✅ | ✅ | | | ✅ | | [N4SID paper](https://people.duke.edu/~hpgavin/SystemID/References/VanOverschee-Automatica-1994.pdf)
+[Croston](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/croston.py)| ✅ | | | | | | |
+[RegressionModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/regression_model.py)| ✅ | ✅ | | ✅ | ✅ | ✅ | |
+[RandomForest](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/random_forest.py) | ✅ | ✅ | | ✅ | ✅ | ✅ | |
+[LinearRegressionModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/linear_regression_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[LightGBMModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/gradient_boosted_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[CatBoostModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/catboost_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[RNNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/rnn_model.py)| ✅ | ✅ | ✅ | ✅ | | ✅ | | [DeepAR paper](https://arxiv.org/abs/1704.04110)
+[BlockRNNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |
+[NBEATSModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/nbeats.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-BEATS paper](https://arxiv.org/abs/1905.10437)
+[NHiTSModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/nhits.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-HiTS paper](https://arxiv.org/abs/2201.12886)
+[TCNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tcn_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [TCN paper](https://arxiv.org/abs/1803.01271), [DeepTCN paper](https://arxiv.org/abs/1906.04397), [blog post](https://medium.com/unit8-machine-learning-publication/temporal-convolutional-networks-and-forecasting-5ce1b6e97ce4)
+[TransformerModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/transformer_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | |
+[TFTModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tft_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
+[Naive Baselines](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/forecasting_model.py) | ✅ | | | | | | |
 ||||||||
 
 
