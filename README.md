@@ -133,7 +133,7 @@ The table below provides a visual overview of how ts_combine key features for ti
 | Benchmarking | ✅ |
 | Visualization | ✅ |
 | Classification | ✅ |
-|||
+
 ### 2. Models
 Here's a breakdown of the forecasting models currently implemented in ts_combine. We are constantly working on bringing more models and features.
 
@@ -163,7 +163,6 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 [TransformerModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/transformer_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | |
 [TFTModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tft_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
 [Naive Baselines](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/forecasting_model.py) | ✅ | | | | | | |
-||||||||
 
 
 * **Forecasting Models:** A large collection of forecasting models; from statistical models (such as ARIMA) to deep learning models (such as N-BEATS).
