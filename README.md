@@ -118,21 +118,17 @@ Mean Time To Detect: 1 days 10:30
 </div> -->
 
 ## Available features
- 1. Detection、Forecasting、Classification
+### 1. Detection、Forecasting、Classification
 The table below provides a visual overview of how ts_combine key features for time series anomaly detection and/or forecastin and classification.
 
-| Feature | supported |
-| :---: | :---: | 
-| Univariate Forecasting | ✅ |
-| Multivariate Forecasting | ✅ |
-| Univariate Anomaly Detection | ✅ | 
-| Multivariate Anomaly Detection | ✅ | 
-| Change Point Detection | ✅ |
-| AutoML | ✅ |
-| Ensembles | ✅ |
-| Benchmarking | ✅ |
-| Visualization | ✅ |
-| Classification | ✅ |
+| Feature | Supported | Examples |
+| :---: | :---: | :--: |
+| Detection | ✅ | [Anomaly Detection](./examples/merlion/anomaly/)|
+| Forecasting | ✅ | [Multivariate Forecasting](./examples/merlion/forecast/) |
+| Classification | ✅ | [SVM](./examples/tslearn/classification/) |
+| Clustering | ✅ | [KMEANS](./examples/tslearn/clustering/) |
+| Benchmarking | ✅ | ... |
+| Visualization | ✅ | ... |
 
 ### 2. Models
 Here's a breakdown of the forecasting models currently implemented in ts_combine. We are constantly working on bringing more models and features.
