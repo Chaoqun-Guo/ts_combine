@@ -44,7 +44,7 @@ A time series analysis integration toolkit in Python
   git submodule update --init repos/tslearn
 
   conda create -n ts_combine #using conda to create a new python environment.
-  conda activate ts_combine && pip install -r requirements.txt # install dependencies for ts_combine
+  conda activate ts_combine && python -m pip install . # install dependencies for ts_combine in local 
   ```
 In order for the installation to be successful, the required dependencies must be installed. For a more detailed guide on how to install ts_combine, please see the [Documention](./docs/installation.md).
 ## Getting started
