@@ -60,58 +60,12 @@ Data Scientists often spend most of their time either cleaning data or building 
 
 `tsfresh` automatically extracts 100s of features from time series. Those features describe basic characteristics of the time series such as the number of peaks, the average or maximal value or more complex features such as the time reversal symmetry statis
 
-<!-- <div align="center">
-
-![tsfresh](./static/images/introduction_ts_exa_features.png)
-</div> -->
-
 ### 3. Data preprocessing and transformations
 Optionally, `tslearn` included in ts_combine has several utilities to preprocess the data. In order to facilitate the convergence of different algorithms, you can scale time series. Alternatively, in order to speed up training times, one can resample the data or apply a piece-wise transformation. 
 
 ### 4. Training a model
 After getting the data in the right format, a model can be trained. Depending on the use case, ts_combine supports different tasks: classification, clustering and regression. For an extensive overview of possibilities, check out our gallery of examples.
-<!-- 
-We begin by importing Merlion’s TimeSeries class and the data loader for the Numenta Anomaly Benchmark NAB. We can then divide a specific time series from this dataset into training and testing splits.
-```
-from merlion.utils import TimeSeries
-from ts_datasets.anomaly import NAB
 
-# Data loader returns pandas DataFrames, which we convert to Merlion TimeSeries
-time_series, metadata = NAB(subset="realKnownCause")[3]
-train_data = TimeSeries.from_pd(time_series[metadata.trainval])
-test_data = TimeSeries.from_pd(time_series[~metadata.trainval])
-test_labels = TimeSeries.from_pd(metadata.anomaly[~metadata.trainval])
-```
-We can then initialize and train Merlion’s DefaultDetector, which is an anomaly detection model that balances performance with efficiency. We also obtain its predictions on the test split.
-```
-from merlion.models.defaults import DefaultDetectorConfig, DefaultDetector
-model = DefaultDetector(DefaultDetectorConfig())
-model.train(train_data=train_data)
-test_pred = model.get_anomaly_label(time_series=test_data)
-```
-Next, we visualize the model's predictions.
-```
-from merlion.plot import plot_anoms
-import matplotlib.pyplot as plt
-fig, ax = model.plot_anomaly(time_series=test_data)
-plot_anoms(ax=ax, anomaly_labels=test_labels)
-plt.show()
-```
-Finally, we can quantitatively evaluate the model. The precision and recall come from the fact that the model fired 3 alarms, with 2 true positives, 1 false negative, and 1 false positive. We also evaluate the mean time the model took to detect each anomaly that it correctly detected. -->
-
-<!-- ```
-from merlion.evaluate.anomaly import TSADMetric
-p = TSADMetric.Precision.value(ground_truth=test_labels, predict=test_pred)
-r = TSADMetric.Recall.value(ground_truth=test_labels, predict=test_pred)
-f1 = TSADMetric.F1.value(ground_truth=test_labels, predict=test_pred)
-mttd = TSADMetric.MeanTimeToDetect.value(ground_truth=test_labels, predict=test_pred)
-print(f"Precision: {p:.4f}, Recall: {r:.4f}, F1: {f1:.4f}\n"
-      f"Mean Time To Detect: {mttd}
-```
-```
-Precision: 0.6667, Recall: 0.6667, F1: 0.6667
-Mean Time To Detect: 1 days 10:30
-``` -->
 
 
 ## Available features
@@ -172,39 +126,7 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 * **PyTorch Lightning Support:** All deep learning models are implemented using PyTorch Lightning, supporting among other things custom callbacks, GPUs/TPUs training and custom trainers.
 * **Filtering Models:** Darts offers three filtering models: `KalmanFilter`, `GaussianProcessFilter`, and `MovingAverage`, which allow to filter time series, and in some cases obtain probabilistic inferences of the underlying states/values.
 * **Datasets** The `darts.datasets` submodule contains some popular time series datasets for rapid experimentation.
-### For examples:
-#### Forecasting in sktime
-```
-from sktime.datasets import load_airline
-from sktime.forecasting.base import ForecastingHorizon
-from sktime.forecasting.model_selection import temporal_train_test_split
-from sktime.forecasting.theta import ThetaForecaster
-from sktime.performance_metrics.forecasting import mean_absolute_percentage_error
 
-y = load_airline()
-y_train, y_test = temporal_train_test_split(y)
-fh = ForecastingHorizon(y_test.index, is_relative=False)
-forecaster = ThetaForecaster(sp=12)  # monthly seasonal periodicity
-forecaster.fit(y_train)
-y_pred = forecaster.predict(fh)
-mean_absolute_percentage_error(y_test, y_pred)
->>> 0.08661467738190656
-```
-#### Classification in sktime
-```
-from sktime.classification.interval_based import TimeSeriesForestClassifier
-from sktime.datasets import load_arrow_head
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-X, y = load_arrow_head()
-X_train, X_test, y_train, y_test = train_test_split(X, y)
-classifier = TimeSeriesForestClassifier()
-classifier.fit(X_train, y_train)
-y_pred = classifier.predict(X_test)
-accuracy_score(y_test, y_pred)
->>> 0.8679245283018868
-```
 ## Documentation
 For example code and an introduction to ts_combine, see the Jupyter notebooks in examples, and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
 ## Contributing
