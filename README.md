@@ -112,10 +112,7 @@ print(f"Precision: {p:.4f}, Recall: {r:.4f}, F1: {f1:.4f}\n"
 Precision: 0.6667, Recall: 0.6667, F1: 0.6667
 Mean Time To Detect: 1 days 10:30
 ``` -->
-<!-- <div align="center">
 
-![anom](./static/images/anom_example.png)
-</div> -->
 
 ## Available features
 ### 1. Detection、Forecasting、Classification
@@ -211,7 +208,7 @@ accuracy_score(y_test, y_pred)
 ## Documentation
 For example code and an introduction to ts_combine, see the Jupyter notebooks in examples, and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
 ## Contributing
-The development is ongoing, and we welcome suggestions, pull requests and issues on GitHub. All contributors will be acknowledged on the [change log page](./docs/change_log_page.md).
+The development is ongoing, and we welcome suggestions, pull requests and issues on GitHub. All contributors will be acknowledged on the [change log page](./docs/change_log.md).
 ## Acknowledgements
 ts_combine integrates the following projects, you can click the link for more details. [darts](https://github.com/unit8co/darts), [Merlion](https://github.com/salesforce/Merlion), [prophet](https://github.com/facebook/prophet), [tslearn](https://github.com/tslearn-team/tslearn/), [tsfresh](https://github.com/blue-yonder/tsfresh), [sktime](https://github.com/alan-turing-institute/sktime). 
 
