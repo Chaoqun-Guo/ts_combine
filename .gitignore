@@ -1,3 +1,4 @@
 .history
 repos/**/.git
 /**/.DS_Store
+/**/__pycache__

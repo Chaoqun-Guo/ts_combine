@@ -11,20 +11,18 @@ base_reqs = read_requirements("ts_combine/requirements/core.txt")
 torch_reqs = read_requirements("ts_combine/requirements/torch.txt")
 
 all_reqs = base_reqs + torch_reqs
+all_reqs = base_reqs
 
 with open("README.md") as fh:
     LONG_DESCRIPTION = fh.read()
 
-
 URL = "https://github.com/Chaoqun-Guo/ts_combine"
-
 
 PROJECT_URLS = {
     "Bug Tracker": "https://github.com/Chaoqun-Guo/ts_combine/issues",
     "Documentation": URL,
     "Source Code": "https://github.com/Chaoqun-Guo/ts_combine",
 }
-
 
 setup(
     name="ts_combine",
