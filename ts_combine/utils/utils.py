@@ -15,7 +15,7 @@ from joblib import Parallel, delayed
 from tqdm import tqdm
 from tqdm.notebook import tqdm as tqdm_notebook
 
-from ts_combine import TimeSeries
+from ts_combine.utils.timeseries import TimeSeries
 from ts_combine.utils.logging import get_logger, raise_if, raise_if_not, raise_log
 
 logger = get_logger(__name__)
