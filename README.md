@@ -86,24 +86,24 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 
 | Model | Univariate | Multivariate | Probabilistic | Multiple-series training | Past-observed covariates support | Future-known covariates | Static covariates support | Reference |
 |:---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-[ARIMA](./ts_combine/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | |
-[VARIMA](./ts_combine/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | |
-[AutoARIMA](./ts_combine/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |
+[ARIMA](./ts_combine/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | | [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.5139&rep=rep1&type=pdf)
+[VARIMA](./ts_combine/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | | [paper](https://digitalcommons.chapman.edu/cgi/viewcontent.cgi?article=1016&context=cads_dissertations)
+[AutoARIMA](./ts_combine/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |[paper](https://j.mecs-press.net/ijmecs/ijmecs-v9-n4/IJMECS-V9-N4-7.pdf)
 [StatsForecastAutoARIMA](./ts_combine/models/forecasting/sf_auto_arima.py)| ✅ | | ✅ | | | ✅ | | [statsforecast](https://github.com/Nixtla/statsforecast)
-[ExponentialSmoothing](./ts_combine/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |
+[ExponentialSmoothing](./ts_combine/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |[paper](https://www.bauer.uh.edu/gardner/Exp-Sm-1985.pdf)
 [BATS+TBATS](./ts_combine/models/forecasting/tbats.py) | ✅ | | ✅ | | | | | [TBATS paper](https://robjhyndman.com/papers/ComplexSeasonality.pdf)
 [Theta+FourTheta](./ts_combine/models/forecasting/theta.py)| ✅ | | | | | | | [Theta](https://robjhyndman.com/papers/Theta.pdf) & [4 Theta](https://github.com/Mcompetitions/M4-methods/blob/master/4Theta%20method.R)
 [Prophet](./ts_combine/models/forecasting/prophet_model.py) | ✅ | | ✅ | | | ✅ | | [Prophet repo](https://github.com/facebook/prophet)
-[FFT](./ts_combine/models/forecasting/fft.py) | ✅ | | | | | | |
+[FFT](./ts_combine/models/forecasting/fft.py) | ✅ | | | | | | |[paper](https://www.academia.edu/download/67053839/j.atmosenv.2010.06.05520210504-12209-5n6mzi.pdf)
 [KalmanForecaster](./ts_combine/models/forecasting/kalman_forecaster.py) | ✅ | ✅ | ✅ | | | ✅ | | [N4SID paper](https://people.duke.edu/~hpgavin/SystemID/References/VanOverschee-Automatica-1994.pdf)
-[Croston](./ts_combine/models/forecasting/croston.py)| ✅ | | | | | | |
+[Croston](./ts_combine/models/forecasting/croston.py)| ✅ | | | | | | | [paper](https://sci-hub.ru/https://link.springer.com/article/10.1057/jors.1972.50)
 [RegressionModel](./ts_combine/models/forecasting/regression_model.py)| ✅ | ✅ | | ✅ | ✅ | ✅ | |
 [RandomForest](./ts_combine/models/forecasting/random_forest.py) | ✅ | ✅ | | ✅ | ✅ | ✅ | |
 [LinearRegressionModel](./ts_combine/models/forecasting/linear_regression_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
 [LightGBMModel](./ts_combine/models/forecasting/gradient_boosted_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
 [CatBoostModel](./ts_combine/models/forecasting/catboost_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
 [RNNModel](./ts_combine/models/forecasting/rnn_model.py)| ✅ | ✅ | ✅ | ✅ | | ✅ | | [DeepAR paper](https://arxiv.org/abs/1704.04110)
-[BlockRNNModel](./ts_combine/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |
+[BlockRNNModel](./ts_combine/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |[paper](https://ieeexplore.ieee.org/iel7/6287639/9312710/09399439.pdf)
 [NBEATSModel](./ts_combine/models/forecasting/nbeats.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-BEATS paper](https://arxiv.org/abs/1905.10437)
 [NHiTSModel](./ts_combine/models/forecasting/nhits.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-HiTS paper](https://arxiv.org/abs/2201.12886)
 [TCNModel](./ts_combine/models/forecasting/tcn_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [TCN paper](https://arxiv.org/abs/1803.01271), [DeepTCN paper](https://arxiv.org/abs/1906.04397), [blog post](https://medium.com/unit8-machine-learning-publication/temporal-convolutional-networks-and-forecasting-5ce1b6e97ce4)
