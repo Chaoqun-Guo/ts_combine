@@ -1,0 +1,1 @@
+## ts_combine integrates the darts project, so all the documents of the darts project can also be used in ts_combine, just replace darts with ts_combine when importing the python package.

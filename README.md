@@ -128,7 +128,11 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 * **Datasets** The `darts.datasets` submodule contains some popular time series datasets for rapid experimentation.
 
 ## Documentation
-For example code and an introduction to ts_combine, see the Jupyter notebooks in examples, and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
+For example code and an introduction to ts_combine, see the Jupyter notebooks in [examples](#examples), and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
+
+### Examples
+ts_combine provides several [code samples](./examples/ts_combine), ts_combine integrates the [darts](https://github.com/unit8co/darts)) project, so all the documents of the darts project can also be used in ts_combine, just replace darts with ts_combine when importing the python package. 
+
 ## Contributing
 The development is ongoing, and we welcome suggestions, pull requests and issues on GitHub. All contributors will be acknowledged on the [change log page](./docs/change_log.md).
 ## Acknowledgements
