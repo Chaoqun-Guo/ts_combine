@@ -74,10 +74,10 @@ The table below provides a visual overview of how ts_combine key features for ti
 
 | Feature | Supported | Examples |
 | :---: | :---: | :--: |
-| Detection | ✅ | [Anomaly Detection](./examples/merlion/anomaly/)|
-| Forecasting | ✅ | [Multivariate Forecasting](./examples/merlion/forecast/) |
-| Classification | ✅ | [SVM](./examples/tslearn/classification/) |
-| Clustering | ✅ | [KMEANS](./examples/tslearn/clustering/) |
+| Detection | ✅ | [Anomaly Detection](./examples/submodules/merlion/anomaly/)|
+| Forecasting | ✅ | [Multivariate Forecasting](./examples/submodules/merlion/forecast/) |
+| Classification | ✅ | [SVM](./examples/submodules/tslearn/classification/) |
+| Clustering | ✅ | [KMEANS](./examples/submodules/tslearn/clustering/) |
 | Benchmarking | ✅ | ... |
 | Visualization | ✅ | ... |
 
@@ -86,30 +86,30 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 
 | Model | Univariate | Multivariate | Probabilistic | Multiple-series training | Past-observed covariates support | Future-known covariates | Static covariates support | Reference |
 |:---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-[ARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | |
-[VARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | |
-[AutoARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |
-[StatsForecastAutoARIMA](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/sf_auto_arima.py)| ✅ | | ✅ | | | ✅ | | [statsforecast](https://github.com/Nixtla/statsforecast)
-[ExponentialSmoothing](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |
-[BATS+TBATS](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tbats.py) | ✅ | | ✅ | | | | | [TBATS paper](https://robjhyndman.com/papers/ComplexSeasonality.pdf)
-[Theta+FourTheta](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/theta.py)| ✅ | | | | | | | [Theta](https://robjhyndman.com/papers/Theta.pdf) & [4 Theta](https://github.com/Mcompetitions/M4-methods/blob/master/4Theta%20method.R)
-[Prophet](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/prophet_model.py) | ✅ | | ✅ | | | ✅ | | [Prophet repo](https://github.com/facebook/prophet)
-[FFT](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/fft.py) | ✅ | | | | | | |
-[KalmanForecaster](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/kalman_forecaster.py) | ✅ | ✅ | ✅ | | | ✅ | | [N4SID paper](https://people.duke.edu/~hpgavin/SystemID/References/VanOverschee-Automatica-1994.pdf)
-[Croston](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/croston.py)| ✅ | | | | | | |
-[RegressionModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/regression_model.py)| ✅ | ✅ | | ✅ | ✅ | ✅ | |
-[RandomForest](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/random_forest.py) | ✅ | ✅ | | ✅ | ✅ | ✅ | |
-[LinearRegressionModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/linear_regression_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[LightGBMModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/gradient_boosted_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[CatBoostModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/catboost_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
-[RNNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/rnn_model.py)| ✅ | ✅ | ✅ | ✅ | | ✅ | | [DeepAR paper](https://arxiv.org/abs/1704.04110)
-[BlockRNNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |
-[NBEATSModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/nbeats.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-BEATS paper](https://arxiv.org/abs/1905.10437)
-[NHiTSModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/nhits.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-HiTS paper](https://arxiv.org/abs/2201.12886)
-[TCNModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tcn_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [TCN paper](https://arxiv.org/abs/1803.01271), [DeepTCN paper](https://arxiv.org/abs/1906.04397), [blog post](https://medium.com/unit8-machine-learning-publication/temporal-convolutional-networks-and-forecasting-5ce1b6e97ce4)
-[TransformerModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/transformer_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | |
-[TFTModel](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/tft_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
-[Naive Baselines](https://github.com/unit8co/darts/tree/20b3a298b5f3da5fb9b94961862da012af6cf7ff/darts/models/forecasting/forecasting_model.py) | ✅ | | | | | | |
+[ARIMA](./ts_combine/models/forecasting/arima.py) | ✅ | | ✅ | | | ✅ | |
+[VARIMA](./ts_combine/models/forecasting/varima.py) | ✅ | ✅ | | | | ✅ | |
+[AutoARIMA](./ts_combine/models/forecasting/auto_arima.py) | ✅ | | | | | ✅ | |
+[StatsForecastAutoARIMA](./ts_combine/models/forecasting/sf_auto_arima.py)| ✅ | | ✅ | | | ✅ | | [statsforecast](https://github.com/Nixtla/statsforecast)
+[ExponentialSmoothing](./ts_combine/models/forecasting/exponential_smoothing.py) | ✅ | | ✅ | | | | |
+[BATS+TBATS](./ts_combine/models/forecasting/tbats.py) | ✅ | | ✅ | | | | | [TBATS paper](https://robjhyndman.com/papers/ComplexSeasonality.pdf)
+[Theta+FourTheta](./ts_combine/models/forecasting/theta.py)| ✅ | | | | | | | [Theta](https://robjhyndman.com/papers/Theta.pdf) & [4 Theta](https://github.com/Mcompetitions/M4-methods/blob/master/4Theta%20method.R)
+[Prophet](./ts_combine/models/forecasting/prophet_model.py) | ✅ | | ✅ | | | ✅ | | [Prophet repo](https://github.com/facebook/prophet)
+[FFT](./ts_combine/models/forecasting/fft.py) | ✅ | | | | | | |
+[KalmanForecaster](./ts_combine/models/forecasting/kalman_forecaster.py) | ✅ | ✅ | ✅ | | | ✅ | | [N4SID paper](https://people.duke.edu/~hpgavin/SystemID/References/VanOverschee-Automatica-1994.pdf)
+[Croston](./ts_combine/models/forecasting/croston.py)| ✅ | | | | | | |
+[RegressionModel](./ts_combine/models/forecasting/regression_model.py)| ✅ | ✅ | | ✅ | ✅ | ✅ | |
+[RandomForest](./ts_combine/models/forecasting/random_forest.py) | ✅ | ✅ | | ✅ | ✅ | ✅ | |
+[LinearRegressionModel](./ts_combine/models/forecasting/linear_regression_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[LightGBMModel](./ts_combine/models/forecasting/gradient_boosted_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[CatBoostModel](./ts_combine/models/forecasting/catboost_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+[RNNModel](./ts_combine/models/forecasting/rnn_model.py)| ✅ | ✅ | ✅ | ✅ | | ✅ | | [DeepAR paper](https://arxiv.org/abs/1704.04110)
+[BlockRNNModel](./ts_combine/models/forecasting/block_rnn_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | | |
+[NBEATSModel](./ts_combine/models/forecasting/nbeats.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-BEATS paper](https://arxiv.org/abs/1905.10437)
+[NHiTSModel](./ts_combine/models/forecasting/nhits.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [N-HiTS paper](https://arxiv.org/abs/2201.12886)
+[TCNModel](./ts_combine/models/forecasting/tcn_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | | [TCN paper](https://arxiv.org/abs/1803.01271), [DeepTCN paper](https://arxiv.org/abs/1906.04397), [blog post](https://medium.com/unit8-machine-learning-publication/temporal-convolutional-networks-and-forecasting-5ce1b6e97ce4)
+[TransformerModel](./ts_combine/models/forecasting/transformer_model.py) | ✅ | ✅ | ✅ | ✅ | ✅ | | |
+[TFTModel](./ts_combine/models/forecasting/tft_model.py)| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | [TFT paper](https://arxiv.org/pdf/1912.09363.pdf), [PyTorch Forecasting](https://pytorch-forecasting.readthedocs.io/en/latest/models.html)
+[Naive Baselines](./ts_combine/models/forecasting/forecasting_model.py) | ✅ | | | | | | |
 
 
 * **Forecasting Models:** A large collection of forecasting models; from statistical models (such as ARIMA) to deep learning models (such as N-BEATS).
@@ -128,9 +128,9 @@ Here's a breakdown of the forecasting models currently implemented in ts_combine
 * **Datasets** The `darts.datasets` submodule contains some popular time series datasets for rapid experimentation.
 
 ## Documentation
-For example code and an introduction to ts_combine, see the Jupyter notebooks in [examples](#examples), and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
+For example code and an introduction to ts_combine, see the Jupyter notebooks in [examples](#1.examples), and the guided walkthrough here. You may find detailed API documentation (including the example code) here. The technical report outlines ts_combine's overall architecture and presents experimental results on time series anomaly detection & forecasting for both univariate and multivariate time series.
 
-### Examples
+### 1.Examples
 ts_combine provides several [code samples](./examples/ts_combine), ts_combine integrates the [darts](https://github.com/unit8co/darts)) project, so all the documents of the darts project can also be used in ts_combine, just replace darts with ts_combine when importing the python package. 
 
 ## Contributing
